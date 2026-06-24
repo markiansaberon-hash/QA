@@ -27,3 +27,5 @@ def test_three_shapes():
     print(repr(rag_case))
     print(repr(chatbot_case))
     print(repr(tool_case))
+
+    # Open Terminal - ollama serve - before running this test
