@@ -5,3 +5,4 @@ __pycache__/
 .deepeval
 .DS_Store
 .DS_Store
+.pytest_cache/
