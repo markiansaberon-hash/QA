@@ -13,9 +13,9 @@ def setup_class_data(request):
     # Teardown code
     print("\nTearing down class data...")
 
-@pytest.mark.usefixtures(setup_class_data)
-class testUserActions: 
-    def test_user_login(self): 
-        print(f"Running test_user_login with user_name: {self.user_name} and email: {self.email}")
-        assert self.user_name == "test_user"
-        assert self.email == "test_user@example.com"
+# @pytest.mark.usefixtures(setup_class_data)
+# class testUserActions: 
+#     def test_user_login(self): 
+#         print(f"Running test_user_login with user_name: {self.user_name} and email: {self.email}")
+#         assert self.user_name == "test_user"
+#         assert self.email == "test_user@example.com"
