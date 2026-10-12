@@ -1,44 +1,42 @@
-# QA
+# QA Engineering Portfolio
 
-Personal learning repo for QA engineering — LLM evaluation, test automation, and tooling experiments.
+[![QA Tests](https://github.com/markiansaberon-hash/QA/actions/workflows/tests.yml/badge.svg)](https://github.com/markiansaberon-hash/QA/actions/workflows/tests.yml)
 
-## About
+Hands-on QA engineering work by **Mark Ian Saberon** (Lead QA Engineer, 11+ years): API test automation with pytest, BDD with Gherkin, and LLM evaluation for AI features.
 
-This repo documents hands-on learning across different QA topics. Each folder represents a tool or concept being explored, with working code and notes.
+## What's inside
 
-## Structure
+| Folder | What it shows |
+| --- | --- |
+| [`python-pytest`](python-pytest) | API test automation with pytest: session-scoped fixtures with setup/teardown, parametrized data-driven tests, markers, JSON schema validation, HTML reports |
+| [`bdd-cucumber`](bdd-cucumber) | BDD with Gherkin and pytest-bdd: reusable Given/When/Then steps, Scenario Outlines, positive and negative API scenarios |
+| [`deepeval`](deepeval) | LLM evaluation with DeepEval: GEval correctness metrics and test case shapes for RAG, chatbot and tool-use |
+| [`deepeval-chat-support`](deepeval-chat-support) | Evaluating a chat-support style LLM with DeepEval (in progress) |
+| [`ragas-basics`](ragas-basics) | RAG evaluation basics with Ragas (in progress) |
+| [`agentic-ai-jev`](agentic-ai-jev) | Notes on agentic AI and LLM-as-a-judge tooling (in progress) |
 
-```
-QA/
-├── CLAUDE.md       # Project context, git workflow, and setup notes
-├── README.md       # This file
-└── DeepEval/       # LLM evaluation using DeepEval + Ollama
-    └── tests/
-        ├── test_1.py   # GEval correctness metric
-        └── test_2.py   # LLMTestCase shapes (RAG, chatbot, tool-use)
-```
+## CI
 
-## Topics
+Every push runs the pytest and BDD suites in GitHub Actions and uploads an HTML test report as a build artifact.
 
-### DeepEval
-LLM evaluation framework for testing AI outputs. Tests run locally using [Ollama](https://ollama.com) with `llama3.2` — no API key required.
-
-**Run tests:**
-```bash
-source venv/bin/activate
-ollama serve          # in a separate terminal
-cd DeepEval
-deepeval test run tests/test_1.py
-```
-
-## Setup
+## Run locally
 
 ```bash
-git clone git@github-personal:markiansaberon-hash/QA.git
+git clone https://github.com/markiansaberon-hash/QA.git
 cd QA
 python3 -m venv venv
 source venv/bin/activate
-pip install deepeval python-dotenv litellm
+pip install -r requirements.txt
+
+# API tests
+cd python-pytest && pytest && cd ..
+
+# BDD tests
+cd bdd-cucumber && pytest && cd ..
 ```
 
-> See `CLAUDE.md` for full git workflow, SSH setup, and known gotchas.
+DeepEval tests run locally with [Ollama](https://ollama.com) (`llama3.2`), so no API key is needed. See each folder's README for details.
+
+## Tech
+
+Python, pytest, pytest-bdd (Gherkin), requests, jsonschema, pytest-html, DeepEval, GitHub Actions
