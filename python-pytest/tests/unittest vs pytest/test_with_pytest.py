@@ -1,6 +1,9 @@
+import pytest
+
 def test_always_passes():
     assert True
 
+@pytest.mark.xfail(reason="Intentional failure to demo pytest output")
 def test_always_fails():
     assert False 
 
