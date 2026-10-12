@@ -7,7 +7,7 @@ import pytest
     ({"firstName": "fname3", "lastName": "lname3", "email": "fname3.lname3@example.com", "role": "developer"}, 201),
     ({"firstName": "fname4", "lastName": "lname4", "email": "fname4.lname4@example.com", "role": "designer"}, 201),
     ({"firstName": "fname5", "lastName": "lname5", "email": "fname5.lname5@example.com", "role": "tester"}, 201),
-    ({"firstName": "fname2", "lastName": "lname2", "email": "fname2.lname2@example.com", "role": "manager"}, 201),
+    ({"firstName": "fname6", "lastName": "lname6", "email": "fname6.lname6@example.com", "role": "qa"}, 201),
 ])
 def test_register_bulk_users(base_url, auth_headers, payload, expected_status):
     print(f"Payload: {payload}")
