@@ -9,7 +9,7 @@ From the repo root (`QA/`):
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install -r "Python with pytest/requirements.txt"
+pip install -r requirements.txt
 ```
 
 On later runs, only `source venv/bin/activate` is needed.

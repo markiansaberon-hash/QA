@@ -10,3 +10,7 @@ requests==2.34.2
 urllib3==2.8.0
 pytest-html>=4.4.0
 pytest-bdd>=9.0.0
+jsonschema>=4.23.0
+deepeval
+python-dotenv
+litellm
