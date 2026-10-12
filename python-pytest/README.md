@@ -55,4 +55,4 @@ Run a group with `pytest -m smoke`, or exclude one with `pytest -m "not slow"`.
 
 - API tests need internet access and use the demo account `qa@demo.io`. The credentials belong to a public demo API, so they are safe to keep in the repo.
 - The access token expires after one hour, so a very long run could get 401 errors.
-- Requirements are pinned in `requirements.txt` (pytest 9.1.1, requests 2.34.2, pytest-html 4.4.0).
+- Requirements are pinned in `requirements.txt` (pytest 9.1.1, requests 2.34.2, pytest-html 4.2.0).
